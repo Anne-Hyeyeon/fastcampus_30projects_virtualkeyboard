@@ -1,0 +1,22 @@
+1. npm init : package json 초기화
+2. webpack 관련 패키지 설치
+3. webpack 버전 바꾸기 : package json에서 버전 수정 후 npm i 
+4. npm i -D 패키지명 : dev dependency의 패키지를 설치하겠다는 뜻
+dev dependency : 로컬 개발에만 필요한 패키지를 뜻함.
+-D 옵션을 빼면 dependency 패키지를 설치하게 된다.
+dependency란? product 환경에서 필요한 패키지
+5. 개발 환경을 강의 내용과 똑같이 (웹팩 버전 동일화) 한 후 npm-i
+6. src에 css와 js 폴더 만들기
+7. 최상위 폴더에 webpack.config.js 생성
+8. npm i -D terser-webpack-plugin
+9. npx webpack : 웹팩 설치 확인
+10. index.js와 index.html
+11. npm i -D mini-css-extract-plugin css-loader css-minimizer-webpack-plugin
+12. npm i -D html-webpack-plugin
+13. 로대시 문법
+14. npm run build 빌드하기 (패키지제이슨의 "build")
+15. 프로덕트 환경에 배포하기 위해 빌드함.  따라서 페키지제이슨 빌드에 --mode=production 입력
+production의 경우 컴팩트하게 줄바꿈, 공백 모두 없애고 컴팩트하게 빌드시켜준다.
+16. 보통은 프로덕션모드, 옵션을 안주면 development로 빌드가 된다.
+17. npx webpack-dev-server 개발서버 띄우기
+18. webpack dev server를 구축하는 이유 : 리프레시 할때마다 자동으로 추적, 새로고침 계속 안 해도 됨.
