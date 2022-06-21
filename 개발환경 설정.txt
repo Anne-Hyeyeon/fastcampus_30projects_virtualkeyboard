@@ -20,3 +20,35 @@ production의 경우 컴팩트하게 줄바꿈, 공백 모두 없애고 컴팩�
 16. 보통은 프로덕션모드, 옵션을 안주면 development로 빌드가 된다.
 17. npx webpack-dev-server 개발서버 띄우기
 18. webpack dev server를 구축하는 이유 : 리프레시 할때마다 자동으로 추적, 새로고침 계속 안 해도 됨.
+19. eslint? 코드를 실행하지 않아도 정적 분석을 통해 문법 오류를 찾아줌. npm i -D eslint
+20. prettier : 코드 포맷터
+npm install --save-dev --save-exact prettier
+prettier의 save exact? 캐럿 (꺾쇠) 없이 설치 -> 원래 캐럿을 허용하면, 패키지가 업데이트 됐을 때, 마이너 버전에 한해 업데이트를 허용함. 우리 개발에서는 정확한 버전을 설치하기 위해서.
+21. npm i -D eslint-config-prettier eslint-plugin-prettier
+22.  eslint-config-prettier  eslint와 prettier가 겹치는 포맷팅 룰을 비활성화시켜준다.
+23. eslint-plugin-prettier eslint 에 prettier의 포맷팅 기능을 추가해준다.
+24.  npx eslint --init    eslint 초기화
+❯ To check syntax and find problems
+❯ JavaScript 
+❯ None of these
+No, Browser, JSON
+.eslintrc.json 생성됨
+25. 24번 생성된 파일에서     "extends": ["eslint:recommended", "plugin:prettier/recommended"]
+26. .eslintignore : eslint를 적용하고 싶지 않은 파일을 지정함. ex) node_modules
+27. .prettierrc.json
+프리티어 포메팅 룰 설정 -> 공식홈페이지 playground에서 예시 보면서 설정
+28. .prettierignore : 프리티어가 적용되지 않게
+29. eslint, prettier, open in brower extension tㅓㄹ치
+30. 커맨트 쉬프트 P : 세팅즈 ->Preference : Open Workspace Settings ->  
+{
+    "editor.formatOnSave" :true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
+입력하기. 저장할 때 프리티어와 이에스린트 적용
+31. eslintrc.json에서 rule에다가  "prettier/prettier":"error" 지정하기
+
+*오류 
+Cannot find module 'html-webpack-plugin'
+npm i --save-dev html-webpack-plugin
